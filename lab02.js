@@ -104,10 +104,10 @@ for (i = 0; i < 4; i++) {
     // console.log(i);
     // console.log(q6);
 
-    if (q6 === num) {
-        alert("Winner winner chicken dinner!")
+    if (q6 == num) {
+        alert("Winner winner chicken dinner!");
         correct++;
-        return true;
+        break;
     } 
     
     else if (q6 < num && q6 >= 1) {
@@ -145,14 +145,18 @@ var stims = ["caffeine", "ephedrine", "nicotine"];
 
 for (var k = 6; k > 0; k--) {
 
-  var q7 = prompt("Can you guess all the chemical stimulants I use? You have " + k + " attempt(s) remaining.");
-  q7 = q7.toLowerCase();
+  var q7 = prompt("Can you guess all the chemical stimulants I use? You have " + k + " attempt(s) remaining.").toLowerCase();
+
+  // console.log(q7);
+  // console.log(stims.includes(q7));
 
   if (stims.includes(q7)) {
     correct++;
-    return true;
+    break;
   }
 
 }
 
-alert("How did you do? The answers were ${stims[0]}, ${stims[1]}, and ${stims[2]}. Out of all 7 questions you got ${correct} right!")
+alert(`Good guess. The full list is ${stims[0]}, ${stims[1]}, and ${stims[2]}. Out of all the questions you got ${correct}/7 right!`)
+
+// oops. I used the .includes() function before I saw the note at the end to not use it. Sorry. I mean, I could obviously have just checked q7 against every item in the array manually.

@@ -13,7 +13,11 @@ p {
   padding: 10px;
 }
 
-#p1 {
+main {
   background-color: rgba(255, 252, 101, 0.842);
   color: slateblue
+}
+
+footer {
+  margin-top: 500px;
 }
