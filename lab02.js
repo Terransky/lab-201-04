@@ -150,7 +150,8 @@ for (var k = 6; k > 0; k--) {
   // console.log(q7);
   // console.log(stims.includes(q7));
 
-  if (stims.includes(q7)) {
+ // if (stims.includes(q7)) {
+  if (q7 == stims[0] || q7 == stims[1] || q7 == stims[2]){
     correct++;
     break;
   }
@@ -158,5 +159,3 @@ for (var k = 6; k > 0; k--) {
 }
 
 alert(`Good guess. The full list is ${stims[0]}, ${stims[1]}, and ${stims[2]}. Out of all the questions you got ${correct}/7 right!`)
-
-// oops. I used the .includes() function before I saw the note at the end to not use it. Sorry. I mean, I could obviously have just checked q7 against every item in the array manually.
